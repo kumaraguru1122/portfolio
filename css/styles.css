@@ -302,9 +302,6 @@ main #download, main #contact-btn {
   min-height: unset;
   padding-bottom: 5rem;
 }
-.contact h2 {
-  grid-column: span 2;
-}
 .contact .contact-info {
   margin-top: 2rem;
   display: grid;
@@ -340,6 +337,9 @@ main #download, main #contact-btn {
   width: 1rem;
   height: auto;
 }
+.contact .social-links h4 {
+  margin-top: 2rem;
+}
 .contact .social-links .links {
   border: 2px solid var(--neutral-700);
   margin: 1rem 0;
@@ -358,5 +358,8 @@ main #download, main #contact-btn {
 @media screen and (min-width: 780px) {
   .contact {
     grid-template-columns: 1fr 1fr;
+  }
+  .contact h4 {
+    grid-column: span 2;
   }
 }/*# sourceMappingURL=styles.css.map */

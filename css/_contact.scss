@@ -1,9 +1,7 @@
 .contact {
   min-height: unset;
   padding-bottom: 5rem;
-  h2 {
-    grid-column: span 2;
-  }
+
   .contact-info {
     margin-top: 2rem;
     display: grid;
@@ -40,6 +38,9 @@
     }
   }
   .social-links {
+    h4 {
+      margin-top: 2rem;
+    }
     .links {
       border: 2px solid var(--neutral-700);
       margin: 1rem 0;
@@ -61,5 +62,8 @@
 @media screen and (min-width: 780px) {
   .contact {
     grid-template-columns: 1fr 1fr;
+    h4 {
+      grid-column: span 2;
+    }
   }
 }
