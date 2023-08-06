@@ -6,35 +6,12 @@
     margin-top: 2rem;
     display: grid;
     gap: 1rem;
-    #mail {
-      display: flex;
-      gap: 1em;
-      align-items: center;
-      &::before {
-        content: url(assets/icons/mail.svg);
-        width: 1rem;
-        height: auto;
-      }
-    }
+    #mail,
+    #loc,
     #phone {
       display: flex;
-      gap: 1em;
+      gap: 1rem;
       align-items: center;
-      &::before {
-        content: url(assets/icons/phone.svg);
-        width: 1rem;
-        height: auto;
-      }
-    }
-    #loc {
-      display: flex;
-      gap: 1em;
-      align-items: center;
-      &::before {
-        content: url(assets/icons/loc.svg);
-        width: 1rem;
-        height: auto;
-      }
     }
   }
   .social-links {
@@ -61,9 +38,15 @@
 }
 @media screen and (min-width: 780px) {
   .contact {
-    grid-template-columns: 1fr 1fr;
+    h2 {
+      grid-column: span 2;
+    }
+    grid-template-columns: auto 1fr;
     h4 {
       grid-column: span 2;
+    }
+    .social-links {
+      justify-self: center;
     }
   }
 }

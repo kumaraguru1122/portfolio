@@ -307,35 +307,12 @@ main #download, main #contact-btn {
   display: grid;
   gap: 1rem;
 }
-.contact .contact-info #mail {
-  display: flex;
-  gap: 1em;
-  align-items: center;
-}
-.contact .contact-info #mail::before {
-  content: url(assets/icons/mail.svg);
-  width: 1rem;
-  height: auto;
-}
+.contact .contact-info #mail,
+.contact .contact-info #loc,
 .contact .contact-info #phone {
   display: flex;
-  gap: 1em;
+  gap: 1rem;
   align-items: center;
-}
-.contact .contact-info #phone::before {
-  content: url(assets/icons/phone.svg);
-  width: 1rem;
-  height: auto;
-}
-.contact .contact-info #loc {
-  display: flex;
-  gap: 1em;
-  align-items: center;
-}
-.contact .contact-info #loc::before {
-  content: url(assets/icons/loc.svg);
-  width: 1rem;
-  height: auto;
 }
 .contact .social-links h4 {
   margin-top: 2rem;
@@ -357,9 +334,15 @@ main #download, main #contact-btn {
 
 @media screen and (min-width: 780px) {
   .contact {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
+  }
+  .contact h2 {
+    grid-column: span 2;
   }
   .contact h4 {
     grid-column: span 2;
+  }
+  .contact .social-links {
+    justify-self: center;
   }
 }/*# sourceMappingURL=styles.css.map */
