@@ -1,0 +1,52 @@
+.my-works {
+  background-color: var(--neutral-300);
+  #w-discription {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .projects {
+    display: grid;
+    gap: 1rem;
+    .project-card {
+      border: 2px solid var(--neutral-000);
+      background-color: var(--neutral-100);
+      margin: 1rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+
+      .p-content {
+        border-top: 2px solid var(--neutral-700);
+        padding: 1em;
+        display: grid;
+        h4 {
+          font-size: var(--fs-m);
+        }
+        .p-description {
+          font-size: 0.9em;
+          font-style: italic;
+        }
+        .p-cta {
+          color: var(--accent-500);
+          font-size: 0.8em;
+          justify-self: end;
+          font-weight: bold;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+  .more-btn {
+    background-color: var(--accent-500);
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: var(--neutral-300);
+    border-radius: 1rem;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

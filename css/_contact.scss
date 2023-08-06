@@ -1,0 +1,61 @@
+.contact {
+  min-height: unset;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 5rem;
+  h2 {
+    grid-column: span 2;
+  }
+  .contact-info {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    #mail {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      &::before {
+        content: url(/assets/icons/envelope-regular.svg);
+        width: 1rem;
+        height: auto;
+      }
+    }
+    #phone {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      &::before {
+        content: url(/assets/icons/phone-solid.svg);
+        width: 1rem;
+        height: auto;
+      }
+    }
+    #loc {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      &::before {
+        content: url(/assets/icons/location-dot-solid.svg);
+        width: 1rem;
+        height: auto;
+      }
+    }
+  }
+  .social-links {
+    .links {
+      border: 2px solid var(--neutral-700);
+      margin: 1rem 0;
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+      padding: 1rem 1.5rem;
+      border-radius: 2rem;
+      a {
+        svg {
+          height: 2.5rem;
+          width: auto;
+          fill: var(--accent-500);
+        }
+      }
+    }
+  }
+}

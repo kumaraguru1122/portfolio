@@ -1,0 +1,43 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--ff-base);
+  color: var(--neutral-700);
+}
+h1 {
+  font-size: var(--fs-3xl);
+  font-family: var(--ff-h1);
+  line-height: 1.1;
+}
+h2,
+h3,
+h4 {
+  font-family: var(--ff-heading);
+}
+h2 {
+  font-size: var(--fs-xxl);
+  border-bottom: 5px solid var(--accent-400);
+}
+h3 {
+  font-size: var(--fs-xl);
+}
+h4 {
+  font-size: var(--fs-l);
+}
+p {
+  font-size: var(--fs-s);
+  line-height: 1.5;
+  max-width: 70ch;
+}
+section {
+  min-height: 100vh;
+  padding: 1rem;
+  display: grid;
+  place-content: start;
+  justify-items: start;
+}
+ul,
+li {
+  list-style-type: none;
+}

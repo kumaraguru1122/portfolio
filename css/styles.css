@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Montserrat:wght@700&family=Poppins:wght@400;600;700&display=swap");
+:root {
+  --fs-s: clamp(1.13rem, calc(1.08rem + 0.22vw), 2rem);
+  --fs-m: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+  --fs-l: clamp(1.62rem, calc(1.5rem + 0.58vw), 1.95rem);
+  --fs-xl: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+  --fs-xxl: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+  --fs-3xl: clamp(2.8rem, calc(2.45rem + 1.77vw), 6rem);
+  --accent-400: #ff5500;
+  --accent-500: #3a0ca3;
+  --neutral-100: #ffffff;
+  --neutral-000: #000000;
+  --neutral-300: #e5e5e5;
+  --neutral-700: #16191b;
+  --ff-base: "Poppins", sans-serif;
+  --ff-h1: "Kanit", sans-serif;
+  --ff-headings: "Montserrat", sans-serif;
+  --mobile-size: 780px;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-base);
+  color: var(--neutral-700);
+}
+
+h1 {
+  font-size: var(--fs-3xl);
+  font-family: var(--ff-h1);
+  line-height: 1.1;
+}
+
+h2,
+h3,
+h4 {
+  font-family: var(--ff-heading);
+}
+
+h2 {
+  font-size: var(--fs-xxl);
+  border-bottom: 5px solid var(--accent-400);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+}
+
+h4 {
+  font-size: var(--fs-l);
+}
+
+p {
+  font-size: var(--fs-s);
+  line-height: 1.5;
+  max-width: 70ch;
+}
+
+section {
+  min-height: 100vh;
+  padding: 1rem;
+  display: grid;
+  place-content: start;
+  justify-items: start;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.hero {
+  background-color: #b3b3b3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23bdbdbd' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23c7c7c7' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23d1d1d1' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23dbdbdb' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23E5E5E5' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23eaeaea' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23efefef' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23f5f5f5' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%23fafafa' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23FFFFFF' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 0;
+  display: grid;
+  place-content: unset;
+  justify-items: unset;
+  grid-template-rows: 10vh auto;
+}
+
+header {
+  background-color: var(--accent-500);
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo a {
+  color: var(--neutral-100);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+header nav .navbar {
+  display: none;
+  margin: 0;
+}
+header nav .navbar li a {
+  color: var(--neutral-100);
+  text-decoration: none;
+}
+header nav .navbar li a:hover {
+  color: var(--accent-400);
+}
+
+main {
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+  justify-items: start;
+}
+main h1 span {
+  color: var(--accent-500);
+}
+main p {
+  margin: 2rem 0;
+}
+main #download, main #contact-btn {
+  background-color: var(--accent-400);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: var(--neutral-100);
+}
+@media screen and (min-width: 780px) {
+  header nav .navbar {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 1rem;
+  }
+  header nav .icon {
+    display: none;
+  }
+  main {
+    text-align: center;
+    justify-items: center;
+  }
+}
+.about {
+  gap: 2rem;
+  min-height: unset;
+}
+.about .my-img {
+  height: 300px;
+  background-color: pink;
+  border: 2px solid black;
+  width: 100%;
+}
+.about .about-content h2 {
+  justify-self: start;
+}
+.about .about-content p {
+  text-align: justify;
+}
+
+.my-works {
+  background-color: var(--neutral-300);
+}
+.my-works #w-discription {
+  margin-top: 1rem;
+  text-align: center;
+}
+.my-works .projects {
+  display: grid;
+  gap: 1rem;
+}
+.my-works .projects .project-card {
+  border: 2px solid var(--neutral-000);
+  background-color: var(--neutral-100);
+  margin: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.my-works .projects .project-card .p-content {
+  border-top: 2px solid var(--neutral-700);
+  padding: 1em;
+  display: grid;
+}
+.my-works .projects .project-card .p-content h4 {
+  font-size: var(--fs-m);
+}
+.my-works .projects .project-card .p-content .p-description {
+  font-size: 0.9em;
+  font-style: italic;
+}
+.my-works .projects .project-card .p-content .p-cta {
+  color: var(--accent-500);
+  font-size: 0.8em;
+  justify-self: end;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.my-works .more-btn {
+  background-color: var(--accent-500);
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: var(--neutral-300);
+  border-radius: 1rem;
+  justify-self: center;
+}
+
+@media screen and (min-width: 780px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.skills {
+  min-height: unset;
+}
+.skills .skill {
+  margin-top: 1rem;
+}
+.skills .skill h3 {
+  font-size: var(--fs-l);
+  color: var(--accent-500);
+}
+.skills .skill ul li {
+  list-style-type: disc;
+}
+
+.contact {
+  min-height: unset;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 5rem;
+}
+.contact h2 {
+  grid-column: span 2;
+}
+.contact .contact-info {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.contact .contact-info #mail {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.contact .contact-info #mail::before {
+  content: url(/assets/icons/envelope-regular.svg);
+  width: 1rem;
+  height: auto;
+}
+.contact .contact-info #phone {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.contact .contact-info #phone::before {
+  content: url(/assets/icons/phone-solid.svg);
+  width: 1rem;
+  height: auto;
+}
+.contact .contact-info #loc {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.contact .contact-info #loc::before {
+  content: url(/assets/icons/location-dot-solid.svg);
+  width: 1rem;
+  height: auto;
+}
+.contact .social-links .links {
+  border: 2px solid var(--neutral-700);
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+}
+.contact .social-links .links a svg {
+  height: 2.5rem;
+  width: auto;
+  fill: var(--accent-500);
+}/*# sourceMappingURL=styles.css.map */

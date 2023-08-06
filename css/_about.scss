@@ -1,0 +1,28 @@
+.about {
+  gap: 2rem;
+  min-height: unset;
+  .my-img {
+    height: 300px;
+    background-color: pink;
+    border: 2px solid black;
+    width: 100%;
+  }
+  .about-content {
+    h2 {
+      justify-self: start;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+// @media screen and (min-width: 780px) {
+//   .about {
+//     grid-template-rows: auto auto;
+//     grid-template-columns: 400px auto;
+//     h2 {
+//       grid-column: span 2;
+//     }
+//   }
+// }

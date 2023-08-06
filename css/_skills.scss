@@ -1,0 +1,13 @@
+.skills {
+  min-height: unset;
+  .skill {
+    margin-top: 1rem;
+    h3 {
+      font-size: var(--fs-l);
+      color: var(--accent-500);
+    }
+    ul li {
+      list-style-type: disc;
+    }
+  }
+}
