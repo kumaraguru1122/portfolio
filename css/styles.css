@@ -313,7 +313,7 @@ main #download, main #contact-btn {
   align-items: center;
 }
 .contact .contact-info #mail::before {
-  content: url(/assets/icons/envelope-regular.svg);
+  content: url(/assets/icons/mail.svg);
   width: 1rem;
   height: auto;
 }
@@ -323,7 +323,7 @@ main #download, main #contact-btn {
   align-items: center;
 }
 .contact .contact-info #phone::before {
-  content: url(/assets/icons/phone-solid.svg);
+  content: url(/assets/icons/phone.svg);
   width: 1rem;
   height: auto;
 }
@@ -333,7 +333,7 @@ main #download, main #contact-btn {
   align-items: center;
 }
 .contact .contact-info #loc::before {
-  content: url(/assets/icons/location-dot-solid.svg);
+  content: url(/assets/icons/loc.svg);
   width: 1rem;
   height: auto;
 }
