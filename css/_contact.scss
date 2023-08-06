@@ -1,6 +1,5 @@
 .contact {
   min-height: unset;
-  grid-template-columns: 1fr 1fr;
   padding-bottom: 5rem;
   h2 {
     grid-column: span 2;
@@ -57,5 +56,10 @@
         }
       }
     }
+  }
+}
+@media screen and (min-width: 780px) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
   }
 }

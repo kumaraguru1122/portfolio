@@ -300,7 +300,6 @@ main #download, main #contact-btn {
 
 .contact {
   min-height: unset;
-  grid-template-columns: 1fr 1fr;
   padding-bottom: 5rem;
 }
 .contact h2 {
@@ -354,4 +353,10 @@ main #download, main #contact-btn {
   height: 2.5rem;
   width: auto;
   fill: var(--accent-500);
+}
+
+@media screen and (min-width: 780px) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
+  }
 }/*# sourceMappingURL=styles.css.map */
