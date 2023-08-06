@@ -11,7 +11,7 @@
       gap: 1em;
       align-items: center;
       &::before {
-        content: url(/assets/icons/mail.svg);
+        content: url(assets/icons/mail.svg);
         width: 1rem;
         height: auto;
       }
@@ -21,7 +21,7 @@
       gap: 1em;
       align-items: center;
       &::before {
-        content: url(/assets/icons/phone.svg);
+        content: url(assets/icons/phone.svg);
         width: 1rem;
         height: auto;
       }
@@ -31,7 +31,7 @@
       gap: 1em;
       align-items: center;
       &::before {
-        content: url(/assets/icons/loc.svg);
+        content: url(assets/icons/loc.svg);
         width: 1rem;
         height: auto;
       }
