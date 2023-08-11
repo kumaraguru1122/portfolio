@@ -48,7 +48,11 @@ main {
   h1 {
     span {
       color: var(--accent-500);
+      overflow: hidden;
     }
+  }
+  #profession {
+    overflow: hidden;
   }
 
   p {
@@ -63,6 +67,9 @@ main {
   }
   #contact-btn {
     @extend #download;
+  }
+  .description {
+    overflow: hidden;
   }
 }
 

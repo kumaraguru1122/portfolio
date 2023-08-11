@@ -83,12 +83,10 @@ select {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -191,6 +189,10 @@ main {
 }
 main h1 span {
   color: var(--accent-500);
+  overflow: hidden;
+}
+main #profession {
+  overflow: hidden;
 }
 main p {
   margin: 2rem 0;
@@ -202,6 +204,10 @@ main #download, main #contact-btn {
   text-decoration: none;
   color: var(--neutral-100);
 }
+main .description {
+  overflow: hidden;
+}
+
 @media screen and (min-width: 780px) {
   header nav .navbar {
     display: flex;
