@@ -11,8 +11,12 @@
       border: 2px solid var(--neutral-100);
       // background-color: var(--neutral-100);
       border-radius: 0px;
-      background: linear-gradient(145deg, #e6e6e6, #ffffff);
-      box-shadow: 10px 10px 20px #e8e8e8, -10px -10px 20px #ffffff;
+      background: linear-gradient(
+        145deg,
+        var(--neutral-700) var(--neutral-100)
+      );
+      box-shadow: 10px 10px 20px var(--neutral-300),
+        -10px -10px 20px var(--neutral-100);
       margin: 1rem;
       padding: 1rem;
       border-radius: 0.5rem;
