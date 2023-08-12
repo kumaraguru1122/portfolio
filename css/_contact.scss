@@ -1,6 +1,30 @@
 .contact {
   min-height: unset;
   padding-bottom: 5rem;
+  gap: 1rem;
+  width: 100%;
+  form {
+    display: grid;
+    gap: 1em;
+    width: 80%;
+    p {
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .wrapper {
+      display: grid;
+    }
+    input[type="submit"] {
+      justify-self: start;
+      background-color: var(--accent-400);
+      padding: 0rem 1rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      color: var(--neutral-100);
+      border: none;
+    }
+  }
 
   .contact-info {
     margin-top: 2rem;
@@ -23,7 +47,7 @@
       margin: 1rem 0;
       width: 100%;
       display: flex;
-      gap: 3rem;
+      justify-content: space-around;
       padding: 1rem 1.5rem;
       border-radius: 2rem;
       a {
@@ -41,7 +65,7 @@
     h2 {
       grid-column: span 2;
     }
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 1fr;
     h4 {
       grid-column: span 2;
     }

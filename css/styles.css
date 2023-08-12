@@ -250,17 +250,24 @@ main .description {
 }
 .my-works .projects {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 .my-works .projects .project-card {
-  border: 2px solid var(--neutral-000);
-  background-color: var(--neutral-100);
+  border: 2px solid var(--neutral-100);
+  border-radius: 0px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 10px 10px 20px #e8e8e8, -10px -10px 20px #ffffff;
   margin: 1rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  position: relative;
+}
+.my-works .projects .project-card img {
+  border-radius: 0.5rem;
+  border: 2px solid var(--neutral-300);
 }
 .my-works .projects .project-card .p-content {
-  border-top: 2px solid var(--neutral-700);
   padding: 1em;
   display: grid;
 }
@@ -277,6 +284,8 @@ main .description {
   justify-self: end;
   font-weight: bold;
   margin-top: 1rem;
+  position: absolute;
+  bottom: 5%;
 }
 .my-works .more-btn {
   background-color: var(--accent-500);
@@ -319,6 +328,29 @@ main .description {
 .contact {
   min-height: unset;
   padding-bottom: 5rem;
+  gap: 1rem;
+  width: 100%;
+}
+.contact form {
+  display: grid;
+  gap: 1em;
+  width: 80%;
+}
+.contact form p {
+  font-weight: bold;
+  font-style: italic;
+}
+.contact form .wrapper {
+  display: grid;
+}
+.contact form input[type=submit] {
+  justify-self: start;
+  background-color: var(--accent-400);
+  padding: 0rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: var(--neutral-100);
+  border: none;
 }
 .contact .contact-info {
   margin-top: 2rem;
@@ -340,7 +372,7 @@ main .description {
   margin: 1rem 0;
   width: 100%;
   display: flex;
-  gap: 3rem;
+  justify-content: space-around;
   padding: 1rem 1.5rem;
   border-radius: 2rem;
 }
@@ -352,7 +384,7 @@ main .description {
 
 @media screen and (min-width: 780px) {
   .contact {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .contact h2 {
     grid-column: span 2;

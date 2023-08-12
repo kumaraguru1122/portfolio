@@ -6,16 +6,26 @@
   }
   .projects {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     .project-card {
-      border: 2px solid var(--neutral-000);
-      background-color: var(--neutral-100);
+      border: 2px solid var(--neutral-100);
+      // background-color: var(--neutral-100);
+      border-radius: 0px;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      box-shadow: 10px 10px 20px #e8e8e8, -10px -10px 20px #ffffff;
       margin: 1rem;
+      padding: 1rem;
       border-radius: 0.5rem;
       overflow: hidden;
+      position: relative;
+
+      img {
+        border-radius: 0.5rem;
+        border: 2px solid var(--neutral-300);
+      }
 
       .p-content {
-        border-top: 2px solid var(--neutral-700);
+        // border-top: 2px solid var(--neutral-700);
         padding: 1em;
         display: grid;
         h4 {
@@ -31,6 +41,8 @@
           justify-self: end;
           font-weight: bold;
           margin-top: 1rem;
+          position: absolute;
+          bottom: 5%;
         }
       }
     }

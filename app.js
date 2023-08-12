@@ -39,6 +39,11 @@ let t1 = gsap.timeline({
         marker: 'true',
         toggleActions: 'restart',
         scrub: 'true',
+        snap: {
+            snapTo: 0.50,
+            duration: 0.5,
+            ease: "power4.out"
+        },
     }
 })
 t1.fromTo('.skill-1', {
