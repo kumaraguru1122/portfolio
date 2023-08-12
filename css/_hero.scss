@@ -16,6 +16,8 @@ header {
   padding: 1rem;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
   .logo {
     a {
       color: var(--neutral-100);

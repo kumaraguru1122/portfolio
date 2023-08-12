@@ -31,20 +31,4 @@ gsap.from('.description .word', {
 
 
 
-let typeSplit2 = new SplitType('[animate]', {
-    types: 'lines, words, chars',
-    tagName: 'span'
-})
 
-gsap.from('[animate] .word', {
-    opacity: 0.3,
-    duration: 1.8,
-    ease: 'back.out',
-    stagger: 0.1,
-
-    scrollTrigger: {
-        trigger: '[animate]',
-        start: 'top center',
-        scrub: true
-    }
-})
