@@ -29,6 +29,43 @@ gsap.from('.description .word', {
 
 })
 
+//skills
 
+let t1 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.skill',
+        start: 'top bottom',
+        end: 'bottom center',
+        marker: 'true',
+        toggleActions: 'restart',
+        scrub: 'true',
+    }
+})
+t1.fromTo('.skill-1', {
+    x: -800,
+    opacity: 0
+}, {
+    x: 0, opacity: 1, duration: 1, ease: 'power1.out',
+})
+t1.fromTo('.skill-2', {
+    x: -800,
+    opacity: 0
+}, {
+    x: 0, opacity: 1, duration: 1, ease: 'power1.out',
+})
+
+//smooth scroll
+const lenis = new lenis()
+
+lenis.on('scroll', (e) => {
+    console.log(e)
+})
+
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
 
 
