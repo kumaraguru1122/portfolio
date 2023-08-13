@@ -156,7 +156,6 @@ li {
 }
 
 .hero {
-  background-color: #b3b3b3;
   background-image: var(--bg-main);
   background-attachment: fixed;
   background-size: cover;
@@ -400,7 +399,6 @@ main .description {
 }
 .skills {
   min-height: unset;
-  background-color: #909090;
   background-image: var(--bg-sec);
   background-attachment: fixed;
   background-size: cover;
