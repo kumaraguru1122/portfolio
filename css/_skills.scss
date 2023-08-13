@@ -1,18 +1,18 @@
 .skills {
   min-height: unset;
-  // background-color: #909090;
+  background-color: var(--neutral-300);
   background-image: var(--bg-sec);
   background-attachment: fixed;
   background-size: cover;
   .skill {
     padding: 1em;
     margin-top: 1rem;
-    background: rgba(255, 255, 255, 0.342);
+    background: rgba(255, 255, 255, 0.322);
     // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
     border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.466);
+    border: 2px solid rgb(255, 255, 255);
     h3 {
       font-size: var(--fs-l);
       color: var(--accent-500);
