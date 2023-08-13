@@ -1,3 +1,15 @@
+// const menuBtn = document.querySelector(".hamburger");
+// const navItems = document.querySelector(".navbar");
+
+// menuBtn.addEventListener("click", () => {
+//     if (navItems.style.display === "none") {
+//         navItems.style.display = "grid";
+//     }
+//     else {
+//         navItems.style.display = "none";
+//     }
+// })
+
 gsap.fromTo(".greeting", { opacity: 0, }, { duration: 2, opacity: 1 });
 
 
@@ -53,7 +65,7 @@ t1.fromTo('.skill-1', {
     x: 0, opacity: 1, duration: 1, ease: 'power1.out',
 })
 t1.fromTo('.skill-2', {
-    x: 800,
+    x: -800,
     opacity: 0
 }, {
     x: 0, opacity: 1, duration: 1, ease: 'power1.out',
@@ -95,32 +107,40 @@ t2.fromTo('#i-mail', {
 
 //darkmode function
 
-let darkMode = localStorage.getItem('darkmode');
-const darkModeBtn = document.querySelector("#dark-mode-btn");
+// let darkMode = localStorage.getItem('darkmode');
+const darkModeBtn = document.querySelector("#darkModeToggle");
+let toggle = false;
 console.log(darkModeBtn);
 
 const enableDarkMode = () => {
     document.body.classList.add("darkmode");
-    localStorage.setItem("darkmode", "enabled");
+
+    // localStorage.setItem("darkmode", "enabled");
 };
 
 const disableDarkMode = () => {
     document.body.classList.remove("darkmode");
-    localStorage.setItem("darkmode", null)
+    // localStorage.setItem("darkmode", null)
 };
 
 darkModeBtn.addEventListener("click", () => {
-    darkMode = localStorage.getItem("darkmode");
-    if (darkMode !== "enabled") {
+    // darkMode = localStorage.getItem("darkmode");
+    if (toggle !== true) {
         enableDarkMode();
         console.log(darkModeBtn);
+        toggle = true;
+
 
     }
     else {
         disableDarkMode();
-
+        toggle = false;
     }
 })
+
+//hamburger menu
+
+
 
 
 

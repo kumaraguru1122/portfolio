@@ -9,12 +9,14 @@
   --fs-3xl: clamp(2.8rem, calc(2.45rem + 1.77vw), 6rem);
 
   --accent-400: #ff5500;
-  --accent-500: #3a0ca3;
+  --accent-500: #4c00ff;
   --neutral-100: #ffffff;
   --neutral-000: #000000;
   --neutral-300: #e5e5e5;
   --neutral-700: #16191b;
 
+  --bg-main: url(/assets/images/radiant-gradient-light.svg);
+  --bg-sec: url(/assets/images/rainbow-vortex-light.svg);
   --ff-base: "Poppins", sans-serif;
   --ff-h1: "Kanit", sans-serif;
   --ff-headings: "Montserrat", sans-serif;
@@ -27,4 +29,7 @@
   --neutral-100: #000000;
   --neutral-700: #e5e5e5;
   --neutral-300: #16191b;
+
+  --bg-main: url(/assets/images/radiant-gradient-dark.svg);
+  --bg-sec: url(/assets/images/rainbow-vortex-dark.svg);
 }

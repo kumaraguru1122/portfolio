@@ -1,5 +1,5 @@
 .contact {
-  background-color: var(--neutral-300);
+  background-color: var(--neutral-100);
   min-height: unset;
   padding-bottom: 5rem;
   gap: 1rem;
@@ -37,6 +37,9 @@
       display: flex;
       gap: 1rem;
       align-items: center;
+      svg {
+        fill: var(--neutral-000);
+      }
     }
   }
   .social-links {
