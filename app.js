@@ -1,14 +1,35 @@
-// const menuBtn = document.querySelector(".hamburger");
-// const navItems = document.querySelector(".navbar");
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navbar');
+const menubtn = document.querySelector('.menu-icon')
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    if (navMenu.classList.contains('show')) {
+        menubtn.classList.add('open');
 
-// menuBtn.addEventListener("click", () => {
-//     if (navItems.style.display === "none") {
-//         navItems.style.display = "grid";
-//     }
-//     else {
-//         navItems.style.display = "none";
-//     }
-// })
+        gsap.to(navMenu, { display: "grid", duration: 0.5, ease: 'power2.out' });
+    } else {
+        menubtn.classList.remove('open');
+
+        gsap.to(navMenu, { display: "none", duration: 0.5, ease: 'power2.in' });
+    }
+});
+
+const navlinks = document.querySelectorAll('.navbar li a');
+console.log(navlinks);
+
+
+navlinks.forEach(item => {
+    item.addEventListener("click", () => {
+        menubtn.classList.remove('open');
+        gsap.to(navMenu, { display: "none", duration: 0.5, ease: 'power2.in' });
+
+    });
+});
+
+
+
+
+
 
 gsap.fromTo(".greeting", { opacity: 0, }, { duration: 2, opacity: 1 });
 
@@ -146,17 +167,17 @@ darkModeBtn.addEventListener("click", () => {
 
 
 //smooth scroll
-const lenis = new lenis()
+// const lenis = new lenis()
 
-lenis.on('scroll', (e) => {
-    console.log(e)
-})
+// lenis.on('scroll', (e) => {
+//     console.log(e)
+// })
 
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-}
+// function raf(time) {
+//     lenis.raf(time)
+//     requestAnimationFrame(raf)
+// }
 
-requestAnimationFrame(raf)
+// requestAnimationFrame(raf)
 
 
