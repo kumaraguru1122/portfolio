@@ -5,12 +5,21 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('show');
     if (navMenu.classList.contains('show')) {
         menubtn.classList.add('open');
-
-        gsap.to(navMenu, { display: "grid", duration: 0.5, ease: 'power2.out' });
+        gsap.fromTo(navMenu, {
+            scaleX: 0, opacity: 1
+        },
+            {
+                scaleX: 1, opacity: 1, display: "grid", transformOrigin: "right center"
+            })
     } else {
         menubtn.classList.remove('open');
 
-        gsap.to(navMenu, { display: "none", duration: 0.5, ease: 'power2.in' });
+        gsap.fromTo(navMenu, {
+            scaleX: 1, opacity: 1
+        },
+            {
+                scaleX: 0, opacity: 1, display: "none", transformOrigin: "left center"
+            })
     }
 });
 
@@ -20,8 +29,10 @@ console.log(navlinks);
 
 navlinks.forEach(item => {
     item.addEventListener("click", () => {
-        menubtn.classList.remove('open');
-        gsap.to(navMenu, { display: "none", duration: 0.5, ease: 'power2.in' });
+        if (window.matchMedia("(max-width:779px)").matches) {
+            menubtn.classList.remove('open');
+            gsap.to(navMenu, { display: "none", duration: 0.5, ease: 'power2.in' });
+        }
 
     });
 });
@@ -72,11 +83,11 @@ let t1 = gsap.timeline({
         marker: 'true',
         toggleActions: 'restart',
         scrub: 'true',
-        snap: {
-            snapTo: 0.50,
-            duration: 0.5,
-            ease: "power2.out"
-        },
+        // snap: {
+        //     snapTo: 0.50,
+        //     duration: 0.5,
+        //     ease: "power2.out"
+        // },
     }
 })
 t1.fromTo('.skill-1', {
@@ -129,9 +140,8 @@ t2.fromTo('#i-mail', {
 //darkmode function
 
 // let darkMode = localStorage.getItem('darkmode');
-const darkModeBtn = document.querySelector("#darkModeToggle");
+const darkModeBtn = document.querySelector(".darkbtn");
 let toggle = false;
-console.log(darkModeBtn);
 
 const enableDarkMode = () => {
     document.body.classList.add("darkmode");
@@ -148,7 +158,6 @@ darkModeBtn.addEventListener("click", () => {
     // darkMode = localStorage.getItem("darkmode");
     if (toggle !== true) {
         enableDarkMode();
-        console.log(darkModeBtn);
         toggle = true;
 
 
