@@ -2,6 +2,7 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.navbar');
 const menubtn = document.querySelector('.menu-icon')
 hamburger.addEventListener('click', () => {
+    console.log("its working..")
     navMenu.classList.toggle('show');
     if (navMenu.classList.contains('show')) {
         menubtn.classList.add('open');
@@ -12,6 +13,7 @@ hamburger.addEventListener('click', () => {
                 scaleX: 1, opacity: 1, display: "grid", transformOrigin: "right center"
             })
     } else {
+
         menubtn.classList.remove('open');
 
         gsap.fromTo(navMenu, {
@@ -31,7 +33,14 @@ navlinks.forEach(item => {
     item.addEventListener("click", () => {
         if (window.matchMedia("(max-width:779px)").matches) {
             menubtn.classList.remove('open');
-            gsap.to(navMenu, { display: "none", duration: 0.5, ease: 'power2.in' });
+            navMenu.classList.remove('show');
+
+            gsap.fromTo(navMenu, {
+                scaleX: 1, opacity: 1
+            },
+                {
+                    scaleX: 0, opacity: 1, display: "none", transformOrigin: "left center"
+                })
         }
 
     });
